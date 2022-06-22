@@ -51,7 +51,7 @@ def calculate_next_coordinates(phi, phi3):
 
 pygame.init()
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Double precision")
+pygame.display.set_caption("Double pendulum")
 clock = pygame.time.Clock()
 phi1 = math.pi - math.pi/2
 phi_der1 = 0
