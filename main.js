@@ -87,7 +87,7 @@ function update_phi(cur_phi, cur_phi_der, func1, cur_phi2, cur_der_phi2, func2, 
     return [phi, phi_der, phi3, phi_der3];
 }
 var time = 0;
-var phi1 = Math.PI - Math.PI/2;
+var phi1 = Math.PI - 3*Math.PI/4;
 var phi2 = Math.PI - Math.PI/4;
 var phi_der1 = 0;
 var phi_der2 = 0;
