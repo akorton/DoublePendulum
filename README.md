@@ -1,3 +1,3 @@
 # DoublePendulum
 
-Phisical simulation of double pendulum.
+Physical simulation of double pendulum.

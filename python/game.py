@@ -63,7 +63,7 @@ pygame.display.set_caption("Double pendulum")
 clock = pygame.time.Clock()
 phi1 = math.pi - 3*math.pi/4
 phi_der1 = 0
-phi2 = math.pi - math.pi/4
+phi2 = math.pi - math.pi/2
 phi_der2 = 0
 last_coordinates = []
 
