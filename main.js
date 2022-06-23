@@ -17,7 +17,7 @@ function draw() {
      var y2 = y1 - 100*L2*Math.cos(phi2);
 
      ctx.fillStyle = BLACK;
-     ctx.fillRect(0, 0, 1000, 800);
+     ctx.fillRect(0, 0, 3000, 3000);
      ctx.fillStyle = RED;
      ctx.strokeStyle = RED;
 
