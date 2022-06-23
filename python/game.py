@@ -9,8 +9,16 @@ def paint():
     x1, y1, x2, y2 = calculate_next_coordinates(phi1, phi2)
     pygame.draw.line(screen, RED, (point_x, point_y), (x1, y1), width=2*int(max(1, M1//10)))
     pygame.draw.line(screen, BLUE, (x1, y1), (x2, y2), width=2*int(max(1, M2//10)))
-    pygame.draw.circle(screen, BLUE, (x2, y2), M2*2)
     pygame.draw.circle(screen, RED, (x1, y1), M1*2)
+    last_coordinates.append((x2, y2))
+    if len(last_coordinates) > last_coordinates_length:
+        last_coordinates.pop(0)
+    last_x0 = last_coordinates[0][0]
+    last_y0 = last_coordinates[0][1]
+    for i in last_coordinates[1:]:
+        pygame.draw.line(screen, RED, (last_x0, last_y0), (i[0], i[1]))
+        last_x0, last_y0 = i[0], i[1]
+    pygame.draw.circle(screen, BLUE, (x2, y2), M2 * 2)
     pygame.display.flip()
 
 
@@ -53,10 +61,11 @@ pygame.init()
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Double pendulum")
 clock = pygame.time.Clock()
-phi1 = math.pi - math.pi/2
+phi1 = math.pi - 3*math.pi/4
 phi_der1 = 0
 phi2 = math.pi - math.pi/4
 phi_der2 = 0
+last_coordinates = []
 
 running = True
 while running:

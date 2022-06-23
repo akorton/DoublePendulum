@@ -16,3 +16,4 @@ g = 9.8
 point_x = 500
 point_y = 300
 dx = 1/1000
+last_coordinates_length = 1000
